@@ -19,13 +19,15 @@ const objList = ref([
     isPaid: false,
   },
 ])
+
 </script>
 
 <template>
   <div>
+    <AddObj :show="false"/>
     <van-nav-bar title="物品清单">
       <template #right>
-        <van-icon name="add" size="18" />
+        <van-icon name="add" size="18" @click="show = true" />
       </template>
     </van-nav-bar>
     <van-card
